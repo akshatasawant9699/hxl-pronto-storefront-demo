@@ -1,0 +1,10 @@
+{
+  "packageDirectories": [
+    { "path": "pronto", "default": false },
+    { "path": "hxl", "default": true }
+  ],
+  "name": "hxl-pronto-storefront-demo",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "67.0"
+}

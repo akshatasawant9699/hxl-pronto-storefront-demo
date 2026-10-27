@@ -1,0 +1,6 @@
+.sf/
+.sfdx/
+.localdevserver/
+.DS_Store
+node_modules/
+*.log

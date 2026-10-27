@@ -1,0 +1,16 @@
+{
+  "$meta": {
+    "env": {
+      "orgUrl": "https://your-domain.my.salesforce.com"
+    }
+  },
+  "$attrs": {
+    "name": "The Green Fork",
+    "cuisine": "Vegan",
+    "status": "Closed",
+    "statusVariant": "secondary",
+    "ratingLabel": "3.8 (8 reviews)",
+    "address": "3011 Gulden Lane, Dallas, TX",
+    "phone": "(214) 555-0113"
+  }
+}

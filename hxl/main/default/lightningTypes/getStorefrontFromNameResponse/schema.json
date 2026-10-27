@@ -1,0 +1,31 @@
+{
+  "title": "Get Storefront From Name Response",
+  "description": "MCP payload: the outputs of GetStorefrontFromNameAction",
+  "lightning:type": "lightning__objectType",
+  "lightning:tags": [
+    "mcp"
+  ],
+  "unevaluatedProperties": false,
+  "properties": {
+    "storefront": {
+      "title": "Storefront",
+      "description": "Display-ready storefront details",
+      "lightning:type": "@apexClassType/c__GetStorefrontFromNameAction$StorefrontDetails"
+    },
+    "storefrontId": {
+      "title": "Storefront ID",
+      "description": "The ID of the retrieved storefront",
+      "lightning:type": "lightning__textType"
+    },
+    "message": {
+      "title": "Message",
+      "description": "Success or error message",
+      "lightning:type": "lightning__textType"
+    },
+    "isSuccess": {
+      "title": "Is Success",
+      "description": "Whether the storefront was retrieved",
+      "lightning:type": "lightning__booleanType"
+    }
+  }
+}

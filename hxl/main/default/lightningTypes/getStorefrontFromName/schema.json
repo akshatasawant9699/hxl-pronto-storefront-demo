@@ -1,0 +1,26 @@
+{
+  "title": "Get Storefront From Name",
+  "description": "MCP result wrapper for the getStorefrontFromName tool",
+  "lightning:type": "lightning__objectType",
+  "lightning:tags": [
+    "mcp"
+  ],
+  "unevaluatedProperties": false,
+  "properties": {
+    "actionName": {
+      "title": "Action Name",
+      "description": "Name of the invoked action",
+      "lightning:type": "lightning__textType"
+    },
+    "isSuccess": {
+      "title": "Is Success",
+      "description": "Whether the action call succeeded",
+      "lightning:type": "lightning__booleanType"
+    },
+    "outputValues": {
+      "title": "Output Values",
+      "description": "The action outputs",
+      "lightning:type": "c__getStorefrontFromNameResponse"
+    }
+  }
+}

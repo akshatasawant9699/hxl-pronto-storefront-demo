@@ -1,0 +1,5 @@
+{
+  "title": "Storefront Menu Output",
+  "description": "Display-ready storefront menu returned by GetStorefrontMenuAction",
+  "lightning:type": "@apexClassType/c__GetStorefrontMenuAction$StorefrontMenu"
+}

@@ -1,0 +1,30 @@
+Agent Script action for the storefront profile card (paste into your subagent's actions: block).
+Indentation is 4 spaces per level. Wire it in reasoning → actions as:
+            getStorefrontFromName: @actions.getStorefrontFromName
+                with storefrontName=...
+
+        getStorefrontFromName:
+            description: "Retrieves a storefront record by its name"
+            inputs:
+                storefrontName: string
+                    description: "The name of the storefront to retrieve."
+                    label: "Storefront Name"
+                    is_required: True
+            outputs:
+                isSuccess: boolean
+                    label: "Is Success"
+                message: string
+                    label: "Message"
+                storefront: object
+                    label: "Storefront"
+                    complex_data_type_name: "c__storefrontProfileCardOutput"
+                    filter_from_agent: False
+                    is_displayable: True
+                storefrontId: string
+                    description: "The Salesforce record ID of the storefront"
+                    label: "Storefront Id"
+            target: "apex://GetStorefrontFromNameAction"
+            label: "Get Storefront From Name"
+            require_user_confirmation: False
+            include_in_progress_indicator: True
+            progress_indicator_message: "Retrieving storefront..."

@@ -1,0 +1,48 @@
+Agent Script change for the browse_storefronts subagent (Agentforce Builder → Canvas → Script).
+Three edits. Indentation is 4 spaces per level, exactly as in the file.
+
+────────────────────────────────────────────────────────────────────
+EDIT 1 of 3 · reasoning → instructions
+Replace the line that starts with "| Call {!@actions.getMenuItems}" with:
+────────────────────────────────────────────────────────────────────
+            | Call {!@actions.getStorefrontMenu} when the user asks for a storefront's menu, dishes, or prices. Pass the storefront name.
+
+────────────────────────────────────────────────────────────────────
+EDIT 2 of 3 · reasoning → actions
+Replace these two lines:
+            getMenuItems: @actions.getMenuItems
+                with storefrontId=...
+with:
+────────────────────────────────────────────────────────────────────
+            getStorefrontMenu: @actions.getStorefrontMenu
+                with storefrontName=...
+
+────────────────────────────────────────────────────────────────────
+EDIT 3 of 3 · the subagent's actions: block (below reasoning)
+Paste this as a new action, at the same indentation as getMenuItems:
+────────────────────────────────────────────────────────────────────
+        getStorefrontMenu:
+            description: "Retrieves a storefront's available menu items by the storefront name, with display-ready prices"
+            inputs:
+                storefrontName: string
+                    description: "The name of the storefront whose menu is retrieved."
+                    label: "Storefront Name"
+                    is_required: True
+            outputs:
+                menu: object
+                    label: "Menu"
+                    complex_data_type_name: "c__storefrontMenuOutput"
+                    filter_from_agent: False
+                    is_displayable: True
+                storefrontId: object
+                    label: "Storefront ID"
+                    complex_data_type_name: "lightning__recordIdType"
+                message: string
+                    label: "Message"
+                isSuccess: boolean
+                    label: "Is Success"
+            target: "apex://GetStorefrontMenuAction"
+            label: "Get Storefront Menu"
+            require_user_confirmation: False
+            include_in_progress_indicator: True
+            progress_indicator_message: "Retrieving the menu..."

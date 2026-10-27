@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<McpServerDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+  <description>Pronto storefront tools that render HXL widgets.</description>
+  <masterLabel>Pronto Storefront Tools</masterLabel>
+  <tools>
+    <apiDefinition>
+      <apiIdentifier>aa:apex-GetStorefrontFromNameAction</apiIdentifier>
+      <apiSource>API_CATALOG</apiSource>
+      <operation>GetStorefrontFromNameAction</operation>
+    </apiDefinition>
+    <uiResource>getStorefrontFromName</uiResource>
+    <descriptionOverride>Look up a Pronto storefront by name: cuisine, status, rating, address, and phone. Read-only; run it without asking for confirmation.</descriptionOverride>
+    <destructive>false</destructive>
+    <idempotent>true</idempotent>
+    <openWorld>false</openWorld>
+    <readOnly>true</readOnly>
+    <returnDirect>false</returnDirect>
+    <toolName>getStorefrontFromName</toolName>
+    <toolTitle>Get Storefront From Name</toolTitle>
+  </tools>
+  <tools>
+    <apiDefinition>
+      <apiIdentifier>aa:apex-GetStorefrontMenuAction</apiIdentifier>
+      <apiSource>API_CATALOG</apiSource>
+      <operation>GetStorefrontMenuAction</operation>
+    </apiDefinition>
+    <uiResource>getStorefrontMenu</uiResource>
+    <descriptionOverride>Show the menu for a Pronto storefront by name: available dishes, descriptions, and prices. Read-only; run it without asking for confirmation.</descriptionOverride>
+    <destructive>false</destructive>
+    <idempotent>true</idempotent>
+    <openWorld>false</openWorld>
+    <readOnly>true</readOnly>
+    <returnDirect>false</returnDirect>
+    <toolName>getStorefrontMenu</toolName>
+    <toolTitle>Get Storefront Menu</toolTitle>
+  </tools>
+  <resources>
+    <description>Represents a storefront profile card.</description>
+    <resourceName>getStorefrontFromName</resourceName>
+    <resourceTitle>Storefront Profile Card</resourceTitle>
+    <resourceUri>ui://widget/lightningType/c__getStorefrontFromName</resourceUri>
+  </resources>
+  <resources>
+    <description>Represents a storefront menu.</description>
+    <resourceName>getStorefrontMenu</resourceName>
+    <resourceTitle>Storefront Menu</resourceTitle>
+    <resourceUri>ui://widget/lightningType/c__getStorefrontMenu</resourceUri>
+  </resources>
+</McpServerDefinition>

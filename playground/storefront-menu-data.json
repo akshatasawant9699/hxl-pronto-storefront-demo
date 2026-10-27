@@ -1,0 +1,43 @@
+{
+  "$meta": {
+    "env": {
+      "orgUrl": ""
+    }
+  },
+  "$attrs": {
+    "storefrontName": "The Green Fork",
+    "summaryLabel": "6 dishes · $8.00–$20.00",
+    "items": [
+      {
+        "name": "Avocado Toast",
+        "description": "Smashed avocado on whole-grain bread with chili flakes.",
+        "priceLabel": "$12.00"
+      },
+      {
+        "name": "Chia Pudding",
+        "description": "Chilled chia pudding with almond milk and fresh berries.",
+        "priceLabel": "$8.00"
+      },
+      {
+        "name": "Plant-Based Burger",
+        "description": "Served with sweet potato fries and a side salad.",
+        "priceLabel": "$20.00"
+      },
+      {
+        "name": "Vegan Buddha Bowl",
+        "description": "Quinoa, chickpeas, roasted vegetables, and tahini dressing.",
+        "priceLabel": "$18.00"
+      },
+      {
+        "name": "Vegan Chocolate Cake",
+        "description": "Rich chocolate cake made with plant-based ingredients.",
+        "priceLabel": "$9.00"
+      },
+      {
+        "name": "Vegan Spring Rolls",
+        "description": "Filled with fresh vegetables and served with peanut sauce.",
+        "priceLabel": "$10.00"
+      }
+    ]
+  }
+}

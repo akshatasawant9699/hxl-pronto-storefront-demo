@@ -1,0 +1,31 @@
+{
+  "title": "Get Storefront Menu Response",
+  "description": "MCP payload: the outputs of GetStorefrontMenuAction",
+  "lightning:type": "lightning__objectType",
+  "lightning:tags": [
+    "mcp"
+  ],
+  "unevaluatedProperties": false,
+  "properties": {
+    "menu": {
+      "title": "Menu",
+      "description": "Display-ready storefront menu",
+      "lightning:type": "@apexClassType/c__GetStorefrontMenuAction$StorefrontMenu"
+    },
+    "storefrontId": {
+      "title": "Storefront ID",
+      "description": "The ID of the storefront",
+      "lightning:type": "lightning__textType"
+    },
+    "message": {
+      "title": "Message",
+      "description": "Success or error message",
+      "lightning:type": "lightning__textType"
+    },
+    "isSuccess": {
+      "title": "Is Success",
+      "description": "Whether menu items were retrieved",
+      "lightning:type": "lightning__booleanType"
+    }
+  }
+}

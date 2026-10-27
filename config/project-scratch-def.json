@@ -1,0 +1,15 @@
+{
+  "orgName": "Pronto HXL Storefront Demo",
+  "edition": "Developer",
+  "language": "en_US",
+  "hasSampleData": false,
+  "features": ["StateAndCountryPicklist", "Einstein1AIPlatform", "EnableSetPasswordInApi"],
+  "settings": {
+    "customAddressFieldSettings": { "enableCustomAddressField": true },
+    "lightningExperienceSettings": { "enableS1DesktopEnabled": true },
+    "userEngagementSettings": { "enableShowSalesforceUserAssist": false },
+    "einsteinGptSettings": { "enableEinsteinGptPlatform": true },
+    "agentPlatformSettings": { "enableAgentPlatform": true },
+    "uiWidgetSettings": { "hxlEnabled": true }
+  }
+}
