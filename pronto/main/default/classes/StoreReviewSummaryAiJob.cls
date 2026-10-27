@@ -54,7 +54,16 @@ public with sharing class StoreReviewSummaryAiJob {
       WITH SYSTEM_MODE
     ];
     System.debug('Job run items: ' + jobRunItems.size());
+    applySummaries(jobRunItems);
+  }
 
+  /**
+   * Writes each completed job run item's summary to its storefront. Split out of handleCompletedJob
+   * because only the AI job engine can mark items Completed, so tests pass items in directly.
+   * @param jobRunItems Completed job run items with Input and Response populated
+   */
+  @TestVisible
+  private static void applySummaries(List<AiJobRunItem> jobRunItems) {
     // Map of storefront ID to review summary
     Map<Id, String> storeIdToSummary = new Map<Id, String>();
     for (AiJobRunItem jobRunItem : jobRunItems) {

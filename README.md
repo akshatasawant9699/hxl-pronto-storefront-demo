@@ -124,8 +124,9 @@ Both tools are read-only, so the client can run them without asking for confirma
 
 `pronto/` is Pronto's `src-base` folder (from [trailheadapps/pronto](https://github.com/trailheadapps/pronto) at commit `5d2659f`) with only the storefront app kept:
 
-- **Removed (customer-service channel):** the Experience Cloud site, messaging, queues, and Omni-Channel presence; the `Customer_Service_Assistant`, `Customer_Order_Assistant`, and `Storefront_Explorer_Assistant` agents; the routing flows and `Identify_Customer_By_Email`; the `Customer_Support_UtilityBar` page; the site's static resource, audience, and CORS entries; and the `ProntoEmployeeServer` MCP server.
+- **Removed (customer-service channel):** the Experience Cloud site, messaging, queues, and Omni-Channel presence; the `Customer_Service_Assistant`, `Customer_Order_Assistant`, and `Storefront_Explorer_Assistant` agents; the routing flows and `Identify_Customer_By_Email`; the `Customer_Support_UtilityBar` page; the site's static resource, audience, and CORS entries; the `ProntoEmployeeServer` MCP server; and the PDF menu import (`ContentVersionTrigger`, its handler, and the `Extract_Menu` prompt template).
 - **Replaced by the HXL versions in `hxl/`:** `GetStorefrontFromNameAction` and its test (now returning display-ready values for the card), and `Employee_Assistant` (now with a local `browse_storefronts` subagent instead of a hand-off to the Storefront Explorer Assistant).
+- **Updated:** `StoreReviewSummaryAiJob` now has a testable `applySummaries` method, with a new `StoreReviewSummaryAiJobTest`.
 - **Moved:** the `Merchant_Management_App` permission set, from `src-headless` into `pronto/`.
 
 For the full Pronto app, including the customer site and the service agents, install [trailheadapps/pronto](https://github.com/trailheadapps/pronto) instead.
